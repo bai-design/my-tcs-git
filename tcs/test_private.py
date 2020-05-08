@@ -1,7 +1,7 @@
 class Apple(object):
     name = 'by'
     sex = ('male','female')
-    langue =['English']
+    langue ={'first':'english'}
     def __init__(self,color,taste):
         self.color = color
         self.taste = taste
@@ -14,7 +14,7 @@ class Apple(object):
     def __roll(self):
         print('Aplle can roll')
     def round(self):
-        return self.__roll()
+        return self.__roll
 class Red_Delicious(Apple):
     def __init__(self,color,taste,shape):
         super().__init__(color,taste)
@@ -28,11 +28,11 @@ class Red_Delicious(Apple):
         print('Shape of Apples is %s;' % self.shape)
     def _eat(self):
         super()._eat()
-#       print('My favorite fruite is apple')
+        print('My favorite fruite is apple')
 if __name__ == '__main__':
     fruit = Red_Delicious('red','sweet','snake')
     print(fruit.return_subject())
-    fruit.round()
+    fruit.round()()
     print(Red_Delicious.mro())
     fruit.apple_attribute()
     fruit._eat()
@@ -43,7 +43,7 @@ if __name__ == '__main__':
     c = Apple('green','sweets')
     c.name ='sy'
     c.sex ='female'
-    c.langue.insert(0,'China')
+    c.langue['second']='china'
     print('My name is %s'%c.name)
     print('My sex is {}'.format(c.sex))
     print('I learn langue:%r'%c.langue)
