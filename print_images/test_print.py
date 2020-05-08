@@ -11,7 +11,9 @@ if __name__ == '__main__':
     image_path = '/usr/local/sln-pro/my-tcs-git/tcs/image/'
     #sheet页名称
     sheet_name_xls_00 = 'dkd-alphone'
+    #创建读取实列
     read_book = Read_excle_xls(book_name_xls,sheet_name_xls_00)
+    #
     image_lists = read_book.read_excle_rows_xls()
     for i in range(1, len(image_lists)):
         im_org = image_lists[str(i)][0]
