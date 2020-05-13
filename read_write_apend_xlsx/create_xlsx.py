@@ -10,9 +10,11 @@ class Create_excel_xlsx(object):
 
     def create_excel_xlsx(self):
         """创建xlsx文件与sheet页"""
+        # 创建xlsx文件
         workbook = openpyxl.Workbook()
         i = 0
         for sheet_name in self.sheet_names:
+            # 添加sheet页
             workbook.create_sheet(sheet_name, i)
             i = i+1
             workbook.save(self.path)

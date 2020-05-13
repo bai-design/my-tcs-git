@@ -30,3 +30,5 @@ class Print_Image(object):
         image_path = path + '%s.png'%(self.name)
         # 保存图片
         img.save(image_path)
+
+
